@@ -335,15 +335,11 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 }
 .avatar-placeholder {
     width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    height: 260px;
+    border-radius: 16px;
     background: var(--bg-light);
     border: 2px solid var(--accent-pink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    object-fit: cover;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 .avatar-name {
