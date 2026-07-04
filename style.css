@@ -676,3 +676,37 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     .social-item { padding: 10px 20px; font-size: 0.8rem; }
     .work-info { padding: 20px; }
 }
+
+/* 海报专用 4 列网格 */
+.works-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.works-grid-4 .work-image {
+    aspect-ratio: 3/4;
+}
+.works-grid-4 .work-info {
+    padding: 16px;
+}
+.works-grid-4 .work-info h3 {
+    font-size: 0.95rem;
+}
+.works-grid-4 .work-desc {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .works-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .works-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
