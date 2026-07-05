@@ -852,3 +852,27 @@ img { max-width: 100%; display: block; border-radius: 8px; }
         grid-row: span 2;
     }
 }
+
+/* ============================================
+   导航栏下载按钮
+   ============================================ */
+.nav-links .download-btn {
+    padding: 8px 20px;
+    background: var(--accent-blue);
+    color: var(--text-main);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.35s ease;
+}
+
+.nav-links .download-btn:hover {
+    background: var(--accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.nav-links .download-btn::after {
+    display: none;
+}
