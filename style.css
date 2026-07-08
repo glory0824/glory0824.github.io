@@ -126,7 +126,14 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 .hero-content {
     max-width: 700px;
     animation: fadeInUp 1s ease;
+    background: rgba(77, 24, 24, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 60px 48px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .hero-greeting {
     font-size: 0.85rem;
     color: var(--accent-blue);
@@ -186,12 +193,12 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     border-radius: 50px;
     transition: var(--transition);
     letter-spacing: 1px;
-    border: 1px solid var(--accent-pink);
+    border: 1px solid var(--accent-blue);  /* 浅蓝边框 */
     margin-left: 16px;
 }
 .btn-secondary:hover {
-    background: var(--accent-pink);
-    color: var(--bg);
+    background: var(--accent-blue);  /* 浅蓝背景 */
+    color: var(--text-main);
     transform: translateY(-2px);
 }
 .hero-scroll {
@@ -255,13 +262,14 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     margin: 0 auto;
 }
 .category-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: rgba(77, 24, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 48px 32px;
     text-align: center;
     transition: var(--transition);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 .category-card:hover {
     transform: translateY(-6px);
@@ -1009,15 +1017,8 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     z-index: -1;
 }
 
-/* 压暗遮罩：在背景图之上加一层半透明黑 */
 .home-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(77, 24, 24, 0.55);
+    display: none;
 }
 
 /* 首页页脚恢复深红色，不再透出背景图 */
