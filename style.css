@@ -995,17 +995,35 @@ img { max-width: 100%; display: block; border-radius: 8px; }
         height: 200px;
     }
 }
-/* 首页全屏固定背景 */
+/* 首页固定背景层 */
 .home-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/bg2.png');
+    background-image: url('images/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+/* 压暗遮罩：在背景图之上加一层半透明黑 */
+.home-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 24, 24, 0.55);
+}
+
+/* 首页页脚恢复深红色，不再透出背景图 */
+body:has(.home-bg) .footer {
+    background: var(--bg);
+    position: relative;
+    z-index: 1;
 }
 }
