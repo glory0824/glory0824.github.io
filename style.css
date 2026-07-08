@@ -121,7 +121,10 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     align-items: center;
     text-align: center;
     padding: 120px 24px 80px;
-    background: var(--bg);
+    background-image: url('images/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
 .hero-content {
