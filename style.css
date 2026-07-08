@@ -876,3 +876,48 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 .nav-links .download-btn::after {
     display: none;
 }
+
+/* ============================================
+   其他创作 - 视频占位（16:9 横版）
+   ============================================ */
+.video-row {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(255,255,255,0.03);
+    overflow-x: auto;
+}
+
+.video-placeholder {
+    flex-shrink: 0;
+    width: 500px;
+    height: 280px;
+    background: rgba(0,0,0,0.3);
+    border: 2px dashed var(--accent-pink);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    gap: 12px;
+}
+
+.video-placeholder span {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.video-placeholder p {
+    font-size: 0.85rem;
+    color: var(--accent-pink);
+}
+
+@media (max-width: 768px) {
+    .video-placeholder {
+        width: 360px;
+        height: 200px;
+    }
+}
+}
